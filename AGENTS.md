@@ -13,7 +13,7 @@ version: 2026-11-21 · owner: 29845 · next review: 2026-12-05
 | # | 问题 | 答案 |
 |---|---|---|
 | 1 | 仓库做什么 | 储存一些 AI 相关的东西——具体到本项目：把「微波加热 / COMSOL」的契约、状态、笔记、模型副本和产物集中一处，作为多 AI 协作的单一真相 |
-| 2 | 主分支？谁能合并 | `未知`。当前 `D:\微波\ai工作区` 还不是 git 仓库。启用 git 前不涉及分支 |
+| 2 | 主分支？谁能合并 | 主分支 `main`（2026-11-21 已推送 `origin`）。合并权：仅 29845 本人。AI 日常改动走 `feat|fix|chore/<短描述>` 分支，由人合并；**只有用户当轮明确要求时才直接推 `main`** |
 | 3 | 允许的顶层目录 / 现有 | 允许：`docs/` `tasks/` `notes/` `models/` + 根文件 `AGENTS.md` `README.md` `STATUS.md` `HANDOFF.md` `CHANGELOG.md`。现有：同上，全部由本轮建立 |
 | 4 | 绝对不许动的路径 | **`E:\comsol` 全部**（COMSOL 6.3 安装体 `COMSOL63/`、安装镜像 `comsol6.3/`、加密教程 `comsol 原创教程/`、`许可证文件/`）。只读，不写、不改名、不移动、不删除 |
 | 5 | 测试 / lint / 构建命令 | `未知`。本项目无代码构建链。模型运行方式见 `docs/reference/external-paths.md`（COMSOL 批处理命令待首个模型落地时确认） |
@@ -48,7 +48,18 @@ version: 2026-11-21 · owner: 29845 · next review: 2026-12-05
 
 ## 3. Git 规则
 
-当前无 git 仓库，本节暂不生效。启用时：分支 `feat|fix|chore/<短描述>`；主分支名先问；一次提交只做一件事；禁止 `push --force` 与改写已推送历史。
+- 远端：`origin` = `git@github.com:2984613441-wq/weibo.git`（**weibo = 微波**，非微博）
+- 主分支：`main`。默认开发分支命名 `feat|fix|chore/<短描述>`，从 `main` 切
+- 提交：`<type>(<scope>): <一句话>`；**一个提交只做一件事**
+- AI 参与的提交可在 footer 注明 `Co-authored-by: <工具名>`
+- **一次提交超过 20 个文件或 500 行 → 先拆或先问**
+
+**禁止**（必须得到人明确同意）：
+
+- `git push --force`、改写已推送历史、`git reset --hard` 丢改动
+- 未经当轮明确要求，直接推 `main`
+- 提交 `.env`、密钥、token、证书、许可证文件、COMSOL 提取文本（版权）
+- 提交 `*.mph` 等大二进制（已在 `.gitignore` 排除）
 
 ## 4. 任务与交接
 
@@ -124,7 +135,7 @@ version: 2026-11-21 · owner: 29845 · next review: 2026-12-05
 2. 教程 `.jdjcy` 是 DRM 加密，需锦技网播放器 + 机器码；不要在这上面耗时间，官方文档 + 案例库更强。
 3. `applications\RF_Module\Microwave_Heating\*.mph` 是只读原件；直接双击改会污染原始案例库，先复制到 `models/`。
 4. `D:\微波\学习案例\*.pdf` 与上述 `.mph` 是配套的一对：PDF 讲步骤，`.mph` 能改参数。只有 PDF 会变成"照着念"。
-5. 两份 PDF 是二进制，本仓库工具无法直出文本；需要 `pdftotext` 或 Python 提取。
+5. 两份 PDF 是二进制，`read` 工具直出不了文本；已用 `pdftotext`（MiKTeX）提取到 `tasks/active/TASK-20261121-002-案例文档提取/output/`。该文本**不入库**（COMSOL 版权），换机器要重新提取。
 
 ## 10. 配套
 

@@ -1,7 +1,8 @@
 # HANDOFF — 交接头
 
 ```
-commit:  无 git
+commit:  b66a28f（main，已推送 origin）
+remote:  git@github.com:2984613441-wq/weibo.git  （weibo = 微波）
 updated: 2026-11-21 17:30 (Asia/Shanghai)
 by:      lead (DSH / DeepSeek Harness)
 status:  阶段 0 完成 + 阶段 1 第 1 步完成（文档已提取，模型尚未开始）
