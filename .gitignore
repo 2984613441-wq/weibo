@@ -1,0 +1,16 @@
+# 由 COMSOL 官方文档提取的正文（版权归属 COMSOL，只在本地使用）
+tasks/*/*/output/*-zh.txt
+
+# 模型与二进制（体积大、可重新生成）
+*.mph
+*.mphbin
+*.class
+*.exe
+*.apk
+
+# 系统与临时
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+*.log

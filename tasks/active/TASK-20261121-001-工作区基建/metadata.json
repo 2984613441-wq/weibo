@@ -1,0 +1,34 @@
+{
+  "task_id": "TASK-20261121-001-工作区基建",
+  "created": "2026-11-21",
+  "owner": "lead (DSH / DeepSeek Harness)",
+  "goal": "建立多 AI 共享状态底座：补齐 AGENTS.md §0 契约、建 STATUS/HANDOFF/CHANGELOG、建 docs 与 ADR、定目录契约",
+  "status": "completed",
+  "scope": "仅写 D:\\微波\\ai工作区；E:\\comsol 只读",
+  "files_changed": [
+    "ai工作区/AGENTS.md (改写：未填模板 -> 已确认契约)",
+    "ai工作区/README.md (新建)",
+    "ai工作区/STATUS.md (新建)",
+    "ai工作区/HANDOFF.md (新建)",
+    "ai工作区/CHANGELOG.md (新建)",
+    "ai工作区/docs/architecture.md (新建)",
+    "ai工作区/docs/reference/external-paths.md (新建)",
+    "ai工作区/docs/adr/0001-边界与单一真相.md (新建)",
+    "ai工作区/docs/adr/0002-多AI协作协议.md (新建)",
+    "ai工作区/notes/笔记模板.md (新建)",
+    "ai工作区/models/README.md (新建)",
+    "ai工作区/tasks/active/TASK-20261121-001-工作区基建/metadata.json (本文件)",
+    "ai工作区/tasks/active/TASK-20261121-001-工作区基建/output/盘点-E-comsol-20261121.md"
+  ],
+  "next": "阶段 1 第 1 步：提取两份 PDF 正文，拆 microwave_oven 步骤清单",
+  "known_undone": [
+    "未提取 PDF 文本（二进制，需 pdftotext/Python，环境未验证）",
+    "未做任何 COMSOL 实际求解",
+    "未启用 git，AGENTS.md §0 第 2 题仍为未知",
+    "用户自己的建模对象（频段/材料/几何/科学问题）未定义"
+  ],
+  "risks": [
+    "许可证可用性仅用户口述，未独立验证",
+    "E:\\comsol\\00-学习工作区 的 30-我的模型/40-笔记 已弃用但未删除，可能造成困惑（已在 ADR 0001 标注）"
+  ]
+}

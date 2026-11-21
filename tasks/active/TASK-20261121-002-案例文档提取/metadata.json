@@ -1,0 +1,26 @@
+{
+  "task_id": "TASK-20261121-002-案例文档提取",
+  "created": "2026-11-21",
+  "owner": "lead (DSH / DeepSeek Harness)",
+  "goal": "把两份 COMSOL 官方模型文档 PDF 提取为可检索文本，产出两个案例的参数对照",
+  "status": "completed",
+  "method": "C:\\Users\\29845\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdftotext.exe -enc UTF-8 -layout",
+  "outputs": [
+    "output/microwave_oven-zh.txt (31.7 KB, 862 行, 32 页)",
+    "output/rf_heating-zh.txt (20.5 KB, 604 行, 24 页)"
+  ],
+  "derived": [
+    "notes/两个案例对照-20261121.md"
+  ],
+  "source_readonly": [
+    "D:\\微波\\学习案例\\models.rf.microwave_oven.zh_CN.pdf",
+    "D:\\微波\\学习案例\\models.rf.rf_heating.zh_CN.pdf"
+  ],
+  "notes": "pdftotext 输出了 MiKTeX 的 Windows 10 弃用告警，exit=0，文本完整可读，中文正常。",
+  "next": "复现 microwave_oven：复制 .mph 到 models/，对照 txt 逐步核对设置，验证 60% 吸收功率",
+  "known_undone": [
+    "未提取图（图 1~4）为图片，文本里只有图注",
+    "土豆介电常数等材料具体数值未抄录",
+    "两份文档未逐行通读，只读了 简介/模型定义/结果与讨论 与章节骨架"
+  ]
+}
